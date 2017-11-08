@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">DesignPatternDemo</string>
+    <string name="mode_simple_factory">简单工厂模式</string>
+    <string name="mode_strategy">策略模式</string>
+    <string name="mode_single_resp">单一职责原则</string>
+    <string name="mode_open_close">开放-封闭原则</string>
+    <string name="mode_dep">依赖倒转原则</string>
+    <string name="mode_decorate">装饰模式</string>
+    <string name="mode_proxy">代理模式</string>
+    <string name="mode_factory">工厂方法模式</string>
+    <string name="mode_prototype">原型模式</string>
+    <string name="mode_template">模板方法模式</string>
+    <string name="mode_dmt">迪米特法则</string>
+    <string name="mode_appearance">外观模式</string>
+    <string name="mode_builder">建造者模式</string>
+    <string name="mode_observer">观察者模式</string>
+    <string name="mode_abstract_factory">抽象工厂模式</string>
+    <string name="mode_state">状态模式</string>
+    <string name="mode_adapter">适配器模式</string>
+    <string name="mode_memo">备忘录模式</string>
+    <string name="mode_portfolio">组合模式</string>
+    <string name="mode_iterator">迭代器模式</string>
+    <string name="mode_single_instance">单例模式</string>
+    <string name="mode_bridge">桥接模式</string>
+    <string name="mode_order">命令模式</string>
+    <string name="mode_liability_chain">职责链模式</string>
+    <string name="mode_broker">中介者模式</string>
+    <string name="mode_flyweight">享元模式</string>
+    <string name="mode_interpreter">解释器模式</string>
+    <string name="mode_visitor">访问者模式</string>
 </resources>

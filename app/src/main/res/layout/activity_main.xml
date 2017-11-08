@@ -6,4 +6,159 @@
     android:orientation="vertical"
     tools:context="com.tongtong.designpatterndemo.MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_50">
+
+            <!--简单工厂模式-->
+            <Button
+                android:id="@+id/btn_mode_simple_factory"
+                style="@style/common_btn_style"
+                android:text="@string/mode_simple_factory" />
+            <!--策略模式-->
+            <Button
+                android:id="@+id/btn_mode_strategy"
+                style="@style/common_btn_style"
+                android:text="@string/mode_strategy" />
+            <!--单一职责原则-->
+            <Button
+                android:id="@+id/btn_mode_single_resp"
+                style="@style/common_btn_style"
+                android:text="@string/mode_single_resp" />
+            <!--开放-封闭原则-->
+            <Button
+                android:id="@+id/btn_mode_open_close"
+                style="@style/common_btn_style"
+                android:text="@string/mode_open_close" />
+            <!--依赖倒转原则-->
+            <Button
+                android:id="@+id/btn_mode_dep"
+                style="@style/common_btn_style"
+                android:text="@string/mode_dep" />
+            <!--装饰模式-->
+            <Button
+                android:id="@+id/btn_mode_decorate"
+                style="@style/common_btn_style"
+                android:text="@string/mode_decorate" />
+            <!--代理模式-->
+            <Button
+                android:id="@+id/btn_mode_proxy"
+                style="@style/common_btn_style"
+                android:text="@string/mode_proxy" />
+            <!--工厂方法模式-->
+            <Button
+                android:id="@+id/btn_mode_factory"
+                style="@style/common_btn_style"
+                android:text="@string/mode_factory" />
+            <!--原型模式-->
+            <Button
+                android:id="@+id/btn_mode_prototype"
+                style="@style/common_btn_style"
+                android:text="@string/mode_prototype" />
+            <!--模板方法模式-->
+            <Button
+                android:id="@+id/btn_mode_template"
+                style="@style/common_btn_style"
+                android:text="@string/mode_template" />
+            <!--迪米特法则-->
+            <Button
+                android:id="@+id/btn_mode_dmt"
+                style="@style/common_btn_style"
+                android:text="@string/mode_dmt" />
+            <!--外观模式-->
+            <Button
+                android:id="@+id/btn_mode_appearance"
+                style="@style/common_btn_style"
+                android:text="@string/mode_appearance" />
+            <!--建造者模式-->
+            <Button
+                android:id="@+id/btn_mode_builder"
+                style="@style/common_btn_style"
+                android:text="@string/mode_builder" />
+            <!--观察者模式-->
+            <Button
+                android:id="@+id/btn_mode_observer"
+                style="@style/common_btn_style"
+                android:text="@string/mode_observer" />
+            <!--抽象工厂模式-->
+            <Button
+                android:id="@+id/btn_mode_abstract_factory"
+                style="@style/common_btn_style"
+                android:text="@string/mode_abstract_factory" />
+            <!--状态模式-->
+            <Button
+                android:id="@+id/btn_mode_state"
+                style="@style/common_btn_style"
+                android:text="@string/mode_state" />
+            <!--适配器模式-->
+            <Button
+                android:id="@+id/btn_mode_adapter"
+                style="@style/common_btn_style"
+                android:text="@string/mode_adapter" />
+            <!--备忘录模式-->
+            <Button
+                android:id="@+id/btn_mode_memo"
+                style="@style/common_btn_style"
+                android:text="@string/mode_memo" />
+            <!--组合模式-->
+            <Button
+                android:id="@+id/btn_mode_portfolio"
+                style="@style/common_btn_style"
+                android:text="@string/mode_portfolio" />
+            <!--迭代器模式-->
+            <Button
+                android:id="@+id/btn_mode_iterator"
+                style="@style/common_btn_style"
+                android:text="@string/mode_iterator" />
+            <!--单例模式-->
+            <Button
+                android:id="@+id/btn_mode_single_instance"
+                style="@style/common_btn_style"
+                android:text="@string/mode_single_instance" />
+            <!--桥接模式-->
+            <Button
+                android:id="@+id/btn_mode_bridge"
+                style="@style/common_btn_style"
+                android:text="@string/mode_bridge" />
+            <!--命令模式-->
+            <Button
+                android:id="@+id/btn_mode_order"
+                style="@style/common_btn_style"
+                android:text="@string/mode_order" />
+            <!--职责链模式-->
+            <Button
+                android:id="@+id/btn_mode_liability_chain"
+                style="@style/common_btn_style"
+                android:text="@string/mode_liability_chain" />
+            <!--中介者模式-->
+            <Button
+                android:id="@+id/btn_mode_broker"
+                style="@style/common_btn_style"
+                android:text="@string/mode_broker" />
+            <!--享元模式-->
+            <Button
+                android:id="@+id/btn_mode_flyweight"
+                style="@style/common_btn_style"
+                android:text="@string/mode_flyweight" />
+            <!--解释器模式-->
+            <Button
+                android:id="@+id/btn_mode_interpreter"
+                style="@style/common_btn_style"
+                android:text="@string/mode_interpreter" />
+            <!--访问者模式-->
+            <Button
+                android:id="@+id/btn_mode_visitor"
+                style="@style/common_btn_style"
+                android:text="@string/mode_visitor" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>
