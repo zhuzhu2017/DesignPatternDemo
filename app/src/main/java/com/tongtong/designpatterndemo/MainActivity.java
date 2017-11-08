@@ -1,9 +1,12 @@
 package com.tongtong.designpatterndemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.tongtong.designpatterndemo.ui.SimpleFactoryActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -77,8 +80,10 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.btn_mode_simple_factory, R.id.btn_mode_strategy, R.id.btn_mode_single_resp, R.id.btn_mode_open_close, R.id.btn_mode_dep, R.id.btn_mode_decorate, R.id.btn_mode_proxy, R.id.btn_mode_factory, R.id.btn_mode_prototype, R.id.btn_mode_template, R.id.btn_mode_dmt, R.id.btn_mode_appearance, R.id.btn_mode_builder, R.id.btn_mode_observer, R.id.btn_mode_abstract_factory, R.id.btn_mode_state, R.id.btn_mode_adapter, R.id.btn_mode_memo, R.id.btn_mode_portfolio, R.id.btn_mode_iterator, R.id.btn_mode_single_instance, R.id.btn_mode_bridge, R.id.btn_mode_order, R.id.btn_mode_liability_chain, R.id.btn_mode_broker, R.id.btn_mode_flyweight, R.id.btn_mode_interpreter, R.id.btn_mode_visitor})
     public void onViewClicked(View view) {
+        Intent jumpIntent = null;
         switch (view.getId()) {
             case R.id.btn_mode_simple_factory:  //简单工厂模式
+                jumpIntent = new Intent(this, SimpleFactoryActivity.class);
                 break;
             case R.id.btn_mode_strategy:    //策略模式
                 break;
@@ -135,5 +140,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_mode_visitor: //访问者模式
                 break;
         }
+        if (jumpIntent != null) startActivity(jumpIntent);
     }
 }
