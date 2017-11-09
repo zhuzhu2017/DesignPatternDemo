@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.tongtong.designpatterndemo.ui.SimpleFactoryActivity;
+import com.tongtong.designpatterndemo.patterns.simplefactory.SimpleFactoryActivity;
+import com.tongtong.designpatterndemo.patterns.strategy.StrategyActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 jumpIntent = new Intent(this, SimpleFactoryActivity.class);
                 break;
             case R.id.btn_mode_strategy:    //策略模式
+                jumpIntent = new Intent(this, StrategyActivity.class);
                 break;
             case R.id.btn_mode_single_resp: //单一职责原则
                 break;

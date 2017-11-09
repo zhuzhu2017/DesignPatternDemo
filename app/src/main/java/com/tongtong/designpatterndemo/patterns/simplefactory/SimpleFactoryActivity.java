@@ -1,4 +1,4 @@
-package com.tongtong.designpatterndemo.ui;
+package com.tongtong.designpatterndemo.patterns.simplefactory;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -70,6 +70,8 @@ public class SimpleFactoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple_factory);
         ButterKnife.bind(this);
+        //设置ActionBar显示内容
+        setTitle("简单工厂模式（简易计算器）");
         //设置输入框不能点击
         etBlank.setEnabled(false);
         numString = "";
@@ -149,8 +151,7 @@ public class SimpleFactoryActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.btn_0:
-                if (!TextUtils.isEmpty(numString))
-                    numString = numString.concat("0");
+                numString = numString.concat("0");
                 break;
             case R.id.btn_result:
                 /**
@@ -165,7 +166,7 @@ public class SimpleFactoryActivity extends AppCompatActivity {
                     if (inputLimit && numString.length() > numAString.length() + 1) {
                         numBString = numString.substring(numAString.length() + 1);
                     }
-                    if (operation != null) {
+                    if (inputLimit && operation != null) {
                         operation.setNumberA(Double.parseDouble(numAString));
                         operation.setNumberB(Double.parseDouble(numBString));
                         double result = operation.getResult();

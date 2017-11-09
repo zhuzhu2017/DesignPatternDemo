@@ -29,4 +29,8 @@
     <string name="mode_interpreter">解释器模式</string>
     <string name="mode_visitor">访问者模式</string>
     <string name="clear_blank">清空</string>
+    <string name="goods_price">商品单价：</string>
+    <string name="goods_num">商品数量：</string>
+    <string name="preference_type">优惠类型：</string>
+    <string name="pay_money">总计：</string>
 </resources>
