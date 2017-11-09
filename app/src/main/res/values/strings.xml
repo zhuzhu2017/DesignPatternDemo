@@ -28,4 +28,5 @@
     <string name="mode_flyweight">享元模式</string>
     <string name="mode_interpreter">解释器模式</string>
     <string name="mode_visitor">访问者模式</string>
+    <string name="clear_blank">清空</string>
 </resources>
