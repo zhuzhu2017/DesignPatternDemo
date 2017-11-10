@@ -47,6 +47,7 @@ public class StrategyActivity extends AppCompatActivity {
     private ArrayList<String> yhList = new ArrayList<>();
     private ArrayList<String> resultList = new ArrayList<>();
     private String selectedYh;  //选中的优惠类型
+    private ArrayAdapter arrayAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,6 +91,7 @@ public class StrategyActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_confirm:
+                resultList.clear();
                 /**
                  * 操作：获取输入的商品单价个数量；
                  * 获取最终结果并设置UI显示
@@ -104,8 +106,12 @@ public class StrategyActivity extends AppCompatActivity {
                 resultList.add("优惠类型：" + selectedYh);
                 resultList.add("赠送积分：" + scores);
                 //设置结果展示
-                ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, resultList);
-                lvPayDetails.setAdapter(arrayAdapter);
+                if (arrayAdapter == null) {
+                    arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, resultList);
+                    lvPayDetails.setAdapter(arrayAdapter);
+                } else {
+                    arrayAdapter.notifyDataSetChanged();
+                }
                 tvPayMoney.setText(result + "");
                 tvScores.setText(scores + "");
                 break;
@@ -116,7 +122,7 @@ public class StrategyActivity extends AppCompatActivity {
                 tvPayMoney.setText(null);
                 tvScores.setText(null);
                 resultList.clear();
-                lvPayDetails.setAdapter(null);
+                if (arrayAdapter != null) arrayAdapter.notifyDataSetChanged();
                 spYhCategory.setSelection(0);
                 etGoodsPrice.requestFocus();
                 break;
