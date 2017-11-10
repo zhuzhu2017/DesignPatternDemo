@@ -33,4 +33,6 @@
     <string name="goods_num">商品数量：</string>
     <string name="preference_type">优惠类型：</string>
     <string name="pay_money">总计：</string>
+    <string name="confirm">确定</string>
+    <string name="reset">重置</string>
 </resources>

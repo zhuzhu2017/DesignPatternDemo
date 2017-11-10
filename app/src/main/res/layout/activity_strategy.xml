@@ -5,69 +5,109 @@
     android:orientation="vertical"
     android:padding="@dimen/space_10">
 
-    <!--商品单价-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/goods_price" />
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/et_goods_price"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/space_40"
-            android:background="@drawable/shape_four_cornor_gray"
-            android:inputType="number"
-            android:padding="@dimen/space_10" />
+            <!--商品单价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goods_price" />
+
+                <EditText
+                    android:id="@+id/et_goods_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_40"
+                    android:background="@drawable/shape_four_cornor_gray"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/space_10" />
+
+            </LinearLayout>
+            <!--商品数量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goods_num" />
+
+                <EditText
+                    android:id="@+id/et_goods_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_40"
+                    android:background="@drawable/shape_four_cornor_gray"
+                    android:inputType="number"
+                    android:padding="@dimen/space_10" />
+
+            </LinearLayout>
+            <!--优惠类型-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preference_type" />
+
+                <Spinner
+                    android:id="@+id/sp_yh_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_40"
+                    android:background="@drawable/shape_four_cornor_gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--确定和重置按钮-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingRight="@dimen/space_10">
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm" />
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:text="@string/reset" />
+
+        </LinearLayout>
 
     </LinearLayout>
-    <!--商品数量-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_10"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/goods_num" />
-
-        <EditText
-            android:id="@+id/et_goods_num"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/space_40"
-            android:background="@drawable/shape_four_cornor_gray"
-            android:inputType="number"
-            android:padding="@dimen/space_10" />
-
-    </LinearLayout>
-    <!--优惠类型-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_10"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/preference_type" />
-
-        <AutoCompleteTextView
-            android:id="@+id/et_preferance_type"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/space_40"
-            android:background="@drawable/shape_four_cornor_gray"
-            android:padding="@dimen/space_10" />
-
-    </LinearLayout>
     <!--支付详情-->
     <ListView
         android:id="@+id/lv_pay_details"
