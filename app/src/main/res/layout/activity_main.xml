@@ -26,21 +26,7 @@
                 android:id="@+id/btn_mode_strategy"
                 style="@style/common_btn_style"
                 android:text="@string/mode_strategy" />
-            <!--单一职责原则-->
-            <Button
-                android:id="@+id/btn_mode_single_resp"
-                style="@style/common_btn_style"
-                android:text="@string/mode_single_resp" />
-            <!--开放-封闭原则-->
-            <Button
-                android:id="@+id/btn_mode_open_close"
-                style="@style/common_btn_style"
-                android:text="@string/mode_open_close" />
-            <!--依赖倒转原则-->
-            <Button
-                android:id="@+id/btn_mode_dep"
-                style="@style/common_btn_style"
-                android:text="@string/mode_dep" />
+
             <!--装饰模式-->
             <Button
                 android:id="@+id/btn_mode_decorate"

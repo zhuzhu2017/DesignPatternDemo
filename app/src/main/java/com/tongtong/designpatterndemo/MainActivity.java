@@ -19,12 +19,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnModeSimpleFactory;
     @BindView(R.id.btn_mode_strategy)
     Button btnModeStrategy;
-    @BindView(R.id.btn_mode_single_resp)
-    Button btnModeSingleResp;
-    @BindView(R.id.btn_mode_open_close)
-    Button btnModeOpenClose;
-    @BindView(R.id.btn_mode_dep)
-    Button btnModeDep;
     @BindView(R.id.btn_mode_decorate)
     Button btnModeDecorate;
     @BindView(R.id.btn_mode_proxy)
@@ -35,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnModePrototype;
     @BindView(R.id.btn_mode_template)
     Button btnModeTemplate;
-    @BindView(R.id.btn_mode_dmt)
-    Button btnModeDmt;
     @BindView(R.id.btn_mode_appearance)
     Button btnModeAppearance;
     @BindView(R.id.btn_mode_builder)
@@ -79,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_mode_simple_factory, R.id.btn_mode_strategy, R.id.btn_mode_single_resp, R.id.btn_mode_open_close, R.id.btn_mode_dep, R.id.btn_mode_decorate, R.id.btn_mode_proxy, R.id.btn_mode_factory, R.id.btn_mode_prototype, R.id.btn_mode_template, R.id.btn_mode_dmt, R.id.btn_mode_appearance, R.id.btn_mode_builder, R.id.btn_mode_observer, R.id.btn_mode_abstract_factory, R.id.btn_mode_state, R.id.btn_mode_adapter, R.id.btn_mode_memo, R.id.btn_mode_portfolio, R.id.btn_mode_iterator, R.id.btn_mode_single_instance, R.id.btn_mode_bridge, R.id.btn_mode_order, R.id.btn_mode_liability_chain, R.id.btn_mode_broker, R.id.btn_mode_flyweight, R.id.btn_mode_interpreter, R.id.btn_mode_visitor})
+    @OnClick({R.id.btn_mode_simple_factory, R.id.btn_mode_strategy, R.id.btn_mode_decorate, R.id.btn_mode_proxy, R.id.btn_mode_factory, R.id.btn_mode_prototype, R.id.btn_mode_template, R.id.btn_mode_appearance, R.id.btn_mode_builder, R.id.btn_mode_observer, R.id.btn_mode_abstract_factory, R.id.btn_mode_state, R.id.btn_mode_adapter, R.id.btn_mode_memo, R.id.btn_mode_portfolio, R.id.btn_mode_iterator, R.id.btn_mode_single_instance, R.id.btn_mode_bridge, R.id.btn_mode_order, R.id.btn_mode_liability_chain, R.id.btn_mode_broker, R.id.btn_mode_flyweight, R.id.btn_mode_interpreter, R.id.btn_mode_visitor})
     public void onViewClicked(View view) {
         Intent jumpIntent = null;
         switch (view.getId()) {
@@ -88,12 +80,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_mode_strategy:    //策略模式
                 jumpIntent = new Intent(this, StrategyActivity.class);
-                break;
-            case R.id.btn_mode_single_resp: //单一职责原则
-                break;
-            case R.id.btn_mode_open_close:  //开放-封闭原则
-                break;
-            case R.id.btn_mode_dep: //依赖倒转原则
                 break;
             case R.id.btn_mode_decorate:    //装饰模式
                 break;
@@ -104,8 +90,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_mode_prototype:   //原型模式
                 break;
             case R.id.btn_mode_template:    //模板方法模式
-                break;
-            case R.id.btn_mode_dmt: //迪米特法则
                 break;
             case R.id.btn_mode_appearance:  //外观模式
                 break;
