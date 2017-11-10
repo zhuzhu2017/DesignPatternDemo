@@ -3,7 +3,6 @@ package com.tongtong.designpatterndemo.patterns.strategy;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -42,8 +41,12 @@ public class StrategyActivity extends AppCompatActivity {
     Button btnConfirm;
     @BindView(R.id.btn_reset)
     Button btnReset;
+    @BindView(R.id.tv_scores)
+    TextView tvScores;
 
     private ArrayList<String> yhList = new ArrayList<>();
+    private ArrayList<String> resultList = new ArrayList<>();
+    private String selectedYh;  //选中的优惠类型
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,6 +61,7 @@ public class StrategyActivity extends AppCompatActivity {
 
     private void initData() {
         //设置优惠类型
+        yhList.add("无优惠");
         yhList.add("满500减200");
         yhList.add("满300减100");
         yhList.add("打九折");
@@ -72,7 +76,7 @@ public class StrategyActivity extends AppCompatActivity {
         spYhCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("选中了", yhList.get(i));
+                selectedYh = yhList.get(i);
             }
 
             @Override
@@ -86,8 +90,35 @@ public class StrategyActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_confirm:
+                /**
+                 * 操作：获取输入的商品单价个数量；
+                 * 获取最终结果并设置UI显示
+                 */
+                String price = etGoodsPrice.getText().toString().trim();
+                String num = etGoodsNum.getText().toString().trim();
+                CashContext cashContext = new CashContext(selectedYh);
+                double result = cashContext.getResult(Double.valueOf(price) * Double.valueOf(num));
+                int scores = cashContext.getScores(Double.valueOf(price) * Double.valueOf(num));
+                resultList.add("商品单价：" + price);
+                resultList.add("商品数量：" + num);
+                resultList.add("优惠类型：" + selectedYh);
+                resultList.add("赠送积分：" + scores);
+                //设置结果展示
+                ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, resultList);
+                lvPayDetails.setAdapter(arrayAdapter);
+                tvPayMoney.setText(result + "");
+                tvScores.setText(scores + "");
                 break;
             case R.id.btn_reset:
+                selectedYh = null;
+                etGoodsPrice.setText(null);
+                etGoodsNum.setText(null);
+                tvPayMoney.setText(null);
+                tvScores.setText(null);
+                resultList.clear();
+                lvPayDetails.setAdapter(null);
+                spYhCategory.setSelection(0);
+                etGoodsPrice.requestFocus();
                 break;
         }
     }
