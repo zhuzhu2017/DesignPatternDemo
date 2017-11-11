@@ -25,6 +25,7 @@
         <activity
             android:name=".patterns.decorator.DecoratorActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".patterns.proxy.ProxyActivity" />
     </application>
 
 </manifest>

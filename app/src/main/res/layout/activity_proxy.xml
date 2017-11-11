@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_10">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--追求者-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pursuiter" />
+
+            <Spinner
+                android:id="@+id/sp_gg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_40"
+                android:background="@drawable/shape_four_cornor_gray" />
+
+        </LinearLayout>
+        <!--代理-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_3"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proxy" />
+
+            <Spinner
+                android:id="@+id/sp_proxy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_40"
+                android:background="@drawable/shape_four_cornor_gray" />
+
+        </LinearLayout>
+        <!--代理-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_3"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beautiful_mm" />
+
+            <Spinner
+                android:id="@+id/sp_mm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_40"
+                android:background="@drawable/shape_four_cornor_gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--按钮-->
+    <Button
+        android:id="@+id/btn_pursuit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_40"
+        android:layout_marginTop="@dimen/space_10"
+        android:text="@string/pursuit" />
+
+    <!--显示-->
+    <TextView
+        android:id="@+id/tv_pursuit_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10"
+        android:textColor="@color/colorAccent" />
+
+</LinearLayout>

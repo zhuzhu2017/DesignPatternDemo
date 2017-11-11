@@ -40,4 +40,8 @@
     <string name="decorator">穿着：</string>
     <string name="decorator_person">装扮一下吧</string>
     <string name="decorator_finished">闪亮登场：</string>
+    <string name="pursuiter">帅哥：</string>
+    <string name="proxy">代理：</string>
+    <string name="beautiful_mm">美女：</string>
+    <string name="pursuit">展开追求吧</string>
 </resources>
