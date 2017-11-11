@@ -22,6 +22,9 @@
         <activity
             android:name=".patterns.strategy.StrategyActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".patterns.decorator.DecoratorActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
     </application>
 
 </manifest>

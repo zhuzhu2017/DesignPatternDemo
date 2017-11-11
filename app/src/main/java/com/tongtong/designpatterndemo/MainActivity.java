@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.tongtong.designpatterndemo.patterns.decorator.DecoratorActivity;
 import com.tongtong.designpatterndemo.patterns.simplefactory.SimpleFactoryActivity;
 import com.tongtong.designpatterndemo.patterns.strategy.StrategyActivity;
 
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 jumpIntent = new Intent(this, StrategyActivity.class);
                 break;
             case R.id.btn_mode_decorate:    //装饰模式
+                jumpIntent = new Intent(this, DecoratorActivity.class);
                 break;
             case R.id.btn_mode_proxy:   //代理模式
                 break;

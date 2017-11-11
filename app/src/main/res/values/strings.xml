@@ -36,4 +36,8 @@
     <string name="confirm">确定</string>
     <string name="reset">重置</string>
     <string name="scores">积分：</string>
+    <string name="person">人物：</string>
+    <string name="decorator">穿着：</string>
+    <string name="decorator_person">装扮一下吧</string>
+    <string name="decorator_finished">闪亮登场：</string>
 </resources>

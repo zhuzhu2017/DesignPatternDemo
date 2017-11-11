@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_10">
+
+    <!--人物和服饰-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--人物-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person" />
+
+            <Spinner
+                android:id="@+id/sp_person"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_40"
+                android:background="@drawable/shape_four_cornor_gray" />
+
+        </LinearLayout>
+
+        <!--服饰-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3"
+                android:text="@string/decorator" />
+
+            <GridView
+                android:id="@+id/gv_decorator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--提交和重置-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10"
+        android:orientation="horizontal">
+
+        <!--提交-->
+        <Button
+            android:id="@+id/btn_decorator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_40"
+            android:layout_weight="1"
+            android:text="@string/decorator_person" />
+        <!--重置-->
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_40"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_weight="1"
+            android:text="扒光了重来" />
+
+    </LinearLayout>
+
+    <!--显示的文案-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/decorator_finished" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font_15" />
+
+    </LinearLayout>
+
+</LinearLayout>
