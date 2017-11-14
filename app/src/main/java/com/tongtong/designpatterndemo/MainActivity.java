@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.tongtong.designpatterndemo.patterns.decorator.DecoratorActivity;
+import com.tongtong.designpatterndemo.patterns.factory.FactoryActivity;
 import com.tongtong.designpatterndemo.patterns.proxy.ProxyActivity;
 import com.tongtong.designpatterndemo.patterns.simplefactory.SimpleFactoryActivity;
 import com.tongtong.designpatterndemo.patterns.strategy.StrategyActivity;
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 jumpIntent = new Intent(this, ProxyActivity.class);
                 break;
             case R.id.btn_mode_factory: //工厂方法模式
+                jumpIntent = new Intent(this, FactoryActivity.class);
                 break;
             case R.id.btn_mode_prototype:   //原型模式
                 break;
