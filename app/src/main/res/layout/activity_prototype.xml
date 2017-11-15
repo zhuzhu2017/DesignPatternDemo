@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_10">
+
+    <!--姓名、性别-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_40"
+            android:layout_weight="1"
+            android:background="@drawable/shape_four_cornor_gray"
+            android:padding="@dimen/space_10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:text="@string/sex" />
+
+        <Spinner
+            android:id="@+id/sp_sex"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_40"
+            android:layout_weight="1"
+            android:background="@drawable/shape_four_cornor_gray" />
+
+    </LinearLayout>
+    <!--工作经历-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10"
+        android:text="@string/workexperience" />
+    <!--时间、企业-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time" />
+
+        <EditText
+            android:id="@+id/et_time"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_40"
+            android:layout_weight="1"
+            android:background="@drawable/shape_four_cornor_gray"
+            android:padding="@dimen/space_10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:text="@string/company" />
+
+        <EditText
+            android:id="@+id/et_company"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_40"
+            android:layout_weight="1"
+            android:background="@drawable/shape_four_cornor_gray"
+            android:padding="@dimen/space_10" />
+
+    </LinearLayout>
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_marginBottom="@dimen/space_10"
+        android:layout_marginTop="@dimen/space_10"
+        android:background="@color/divider_line" />
+    <!--生成结果-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_light"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_40"
+            android:layout_weight="1"
+            android:text="@string/result_01" />
+
+        <Button
+            android:id="@+id/btn_deep"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/space_40"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_weight="1"
+            android:text="@string/result_deep" />
+
+    </LinearLayout>
+    <!--内容展示区域-->
+    <TextView
+        android:id="@+id/tv_show_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_10"
+        android:background="@android:color/white" />
+
+</LinearLayout>

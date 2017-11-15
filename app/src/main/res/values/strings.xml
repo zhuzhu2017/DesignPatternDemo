@@ -44,4 +44,11 @@
     <string name="proxy">代理：</string>
     <string name="beautiful_mm">美女：</string>
     <string name="pursuit">展开追求吧</string>
+    <string name="name">姓名：</string>
+    <string name="sex">性别：</string>
+    <string name="workexperience">工作经历</string>
+    <string name="time">时间：</string>
+    <string name="company">企业：</string>
+    <string name="result_01">浅复制结果</string>
+    <string name="result_deep">深复制结果</string>
 </resources>

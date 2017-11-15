@@ -24,7 +24,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 装饰者模式
+ * 装饰者模式：
+ * 动态地给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更为灵活
  * Created by allen on 2017/11/11.
  */
 

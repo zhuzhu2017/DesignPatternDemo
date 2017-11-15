@@ -29,6 +29,9 @@
         <activity
             android:name=".patterns.factory.FactoryActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".patterns.prototype.PrototypeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
     </application>
 
 </manifest>
