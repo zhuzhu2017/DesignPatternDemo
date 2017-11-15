@@ -41,6 +41,12 @@ public class PrototypeActivity extends AppCompatActivity {
     Button btnDeep;
     @BindView(R.id.tv_show_result)
     TextView tvShowResult;
+    @BindView(R.id.et_age)
+    EditText etAge;
+    @BindView(R.id.et_time2)
+    EditText etTime2;
+    @BindView(R.id.et_company2)
+    EditText etCompany2;
 
     private ArrayList<String> sexList = new ArrayList<>();
     private String selectedSex;
@@ -74,10 +80,48 @@ public class PrototypeActivity extends AppCompatActivity {
         String name = etName.getText().toString().trim();
         String time = etTime.getText().toString().trim();
         String company = etCompany.getText().toString().trim();
+        String age = etAge.getText().toString().trim();
+        String time2 = etTime2.getText().toString().trim();
+        String company2 = etCompany2.getText().toString().trim();
         switch (view.getId()) {
             case R.id.btn_light:
+                Resume resumeA = new Resume(name);
+                resumeA.setPersonalInfo(selectedSex, age);
+                resumeA.setWorkExperience(time, company);
+                //复制
+                Resume resumeB = null;
+                try {
+                    resumeB = (Resume) resumeA.clone();
+                    resumeB.setPersonalInfo(selectedSex, age);
+                    resumeB.setWorkExperience(time2, company2);
+                } catch (CloneNotSupportedException e) {
+                    e.printStackTrace();
+                }
+                String displayA = resumeA.display();
+                String displayB = null;
+                if (resumeB != null) {
+                    displayB = resumeB.display();
+                }
+                tvShowResult.setText(displayA + "\n" + displayB);
                 break;
             case R.id.btn_deep:
+                ResumeDeep resumeDeepA = new ResumeDeep(name);
+                resumeDeepA.setPersonalInfo(selectedSex, age);
+                resumeDeepA.setWorkExperience(time, company);
+                //深复制
+                ResumeDeep resumeDeepB = null;
+                try {
+                    resumeDeepB = (ResumeDeep) resumeDeepA.clone();
+                    resumeDeepB.setWorkExperience(time2, company2);
+                } catch (CloneNotSupportedException e) {
+                    e.printStackTrace();
+                }
+                String displayDeepA = resumeDeepA.display();
+                String displayDeepB = null;
+                if (resumeDeepB != null) {
+                    displayDeepB = resumeDeepB.display();
+                }
+                tvShowResult.setText(displayDeepA + "\n" + displayDeepB);
                 break;
         }
     }

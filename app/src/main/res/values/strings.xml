@@ -51,4 +51,5 @@
     <string name="company">企业：</string>
     <string name="result_01">浅复制结果</string>
     <string name="result_deep">深复制结果</string>
+    <string name="age">年龄：</string>
 </resources>
