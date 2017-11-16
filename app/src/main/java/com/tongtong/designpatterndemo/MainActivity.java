@@ -12,6 +12,7 @@ import com.tongtong.designpatterndemo.patterns.prototype.PrototypeActivity;
 import com.tongtong.designpatterndemo.patterns.proxy.ProxyActivity;
 import com.tongtong.designpatterndemo.patterns.simplefactory.SimpleFactoryActivity;
 import com.tongtong.designpatterndemo.patterns.strategy.StrategyActivity;
+import com.tongtong.designpatterndemo.patterns.template.TemplateActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 jumpIntent = new Intent(this, PrototypeActivity.class);
                 break;
             case R.id.btn_mode_template:    //模板方法模式
+                jumpIntent = new Intent(this, TemplateActivity.class);
                 break;
             case R.id.btn_mode_appearance:  //外观模式
                 break;

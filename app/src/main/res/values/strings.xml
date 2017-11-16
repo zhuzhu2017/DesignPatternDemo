@@ -52,4 +52,5 @@
     <string name="result_01">浅复制结果</string>
     <string name="result_deep">深复制结果</string>
     <string name="age">年龄：</string>
+    <string name="question">1到5五个数字，利用+、-、*、/和括号运算最后得出结果0。说明：每个数字和运算符号只能使用一次,而且运算符号顺序按照+、-、*、/排列</string>
 </resources>
