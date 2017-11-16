@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.tongtong.designpatterndemo.patterns.decorator.DecoratorActivity;
+import com.tongtong.designpatterndemo.patterns.facade.FacadeActivity;
 import com.tongtong.designpatterndemo.patterns.factory.FactoryActivity;
 import com.tongtong.designpatterndemo.patterns.prototype.PrototypeActivity;
 import com.tongtong.designpatterndemo.patterns.proxy.ProxyActivity;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnModePrototype;
     @BindView(R.id.btn_mode_template)
     Button btnModeTemplate;
-    @BindView(R.id.btn_mode_appearance)
+    @BindView(R.id.btn_mode_facade)
     Button btnModeAppearance;
     @BindView(R.id.btn_mode_builder)
     Button btnModeBuilder;
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_mode_simple_factory, R.id.btn_mode_strategy, R.id.btn_mode_decorate, R.id.btn_mode_proxy, R.id.btn_mode_factory, R.id.btn_mode_prototype, R.id.btn_mode_template, R.id.btn_mode_appearance, R.id.btn_mode_builder, R.id.btn_mode_observer, R.id.btn_mode_abstract_factory, R.id.btn_mode_state, R.id.btn_mode_adapter, R.id.btn_mode_memo, R.id.btn_mode_portfolio, R.id.btn_mode_iterator, R.id.btn_mode_single_instance, R.id.btn_mode_bridge, R.id.btn_mode_order, R.id.btn_mode_liability_chain, R.id.btn_mode_broker, R.id.btn_mode_flyweight, R.id.btn_mode_interpreter, R.id.btn_mode_visitor})
+    @OnClick({R.id.btn_mode_simple_factory, R.id.btn_mode_strategy, R.id.btn_mode_decorate, R.id.btn_mode_proxy, R.id.btn_mode_factory, R.id.btn_mode_prototype, R.id.btn_mode_template, R.id.btn_mode_facade, R.id.btn_mode_builder, R.id.btn_mode_observer, R.id.btn_mode_abstract_factory, R.id.btn_mode_state, R.id.btn_mode_adapter, R.id.btn_mode_memo, R.id.btn_mode_portfolio, R.id.btn_mode_iterator, R.id.btn_mode_single_instance, R.id.btn_mode_bridge, R.id.btn_mode_order, R.id.btn_mode_liability_chain, R.id.btn_mode_broker, R.id.btn_mode_flyweight, R.id.btn_mode_interpreter, R.id.btn_mode_visitor})
     public void onViewClicked(View view) {
         Intent jumpIntent = null;
         switch (view.getId()) {
@@ -101,7 +102,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_mode_template:    //模板方法模式
                 jumpIntent = new Intent(this, TemplateActivity.class);
                 break;
-            case R.id.btn_mode_appearance:  //外观模式
+            case R.id.btn_mode_facade:  //外观模式
+                jumpIntent = new Intent(this, FacadeActivity.class);
                 break;
             case R.id.btn_mode_builder: //建造者模式
                 break;

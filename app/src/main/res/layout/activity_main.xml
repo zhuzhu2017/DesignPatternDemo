@@ -52,14 +52,9 @@
                 android:id="@+id/btn_mode_template"
                 style="@style/common_btn_style"
                 android:text="@string/mode_template" />
-            <!--迪米特法则-->
-            <Button
-                android:id="@+id/btn_mode_dmt"
-                style="@style/common_btn_style"
-                android:text="@string/mode_dmt" />
             <!--外观模式-->
             <Button
-                android:id="@+id/btn_mode_appearance"
+                android:id="@+id/btn_mode_facade"
                 style="@style/common_btn_style"
                 android:text="@string/mode_appearance" />
             <!--建造者模式-->

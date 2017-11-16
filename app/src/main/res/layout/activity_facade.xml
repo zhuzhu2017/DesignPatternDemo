@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/space_10">
+
+    <!--说明-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/describe" />
+
+    <Button
+        android:id="@+id/btn_straight_buy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_40"
+        android:layout_marginTop="@dimen/space_10"
+        android:text="客户直接买股票" />
+
+    <Button
+        android:id="@+id/btn_buy_fund"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_40"
+        android:layout_marginTop="@dimen/space_10"
+        android:text="客户买基金" />
+
+    <TextView
+        android:id="@+id/tv_buy_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10" />
+
+</LinearLayout>
