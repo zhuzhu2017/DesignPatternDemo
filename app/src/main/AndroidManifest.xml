@@ -34,6 +34,7 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".patterns.template.TemplateActivity" />
         <activity android:name=".patterns.facade.FacadeActivity"/>
+        <activity android:name=".patterns.builder.BuilderActivity"/>
     </application>
 
 </manifest>

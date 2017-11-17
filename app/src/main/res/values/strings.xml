@@ -54,4 +54,7 @@
     <string name="age">年龄：</string>
     <string name="question">1到5五个数字，利用+、-、*、/和括号运算最后得出结果0。说明：每个数字和运算符号只能使用一次,而且运算符号顺序按照+、-、*、/排列</string>
     <string name="describe">一共三支股票，分为用户直接买卖股票和通过买基金实现买卖股票两种方式实现</string>
+    <string name="height">身高：</string>
+    <string name="weight">体重：</string>
+    <string name="build_person">创建小人</string>
 </resources>

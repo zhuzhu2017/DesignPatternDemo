@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.tongtong.designpatterndemo.patterns.builder.BuilderActivity;
 import com.tongtong.designpatterndemo.patterns.decorator.DecoratorActivity;
 import com.tongtong.designpatterndemo.patterns.facade.FacadeActivity;
 import com.tongtong.designpatterndemo.patterns.factory.FactoryActivity;
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 jumpIntent = new Intent(this, FacadeActivity.class);
                 break;
             case R.id.btn_mode_builder: //建造者模式
+                jumpIntent = new Intent(this, BuilderActivity.class);
                 break;
             case R.id.btn_mode_observer:    //观察者模式
                 break;
